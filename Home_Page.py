@@ -24,14 +24,14 @@ def main():
         <ul>
         <li>Delay</li>
         <li>Volume</li>
-        <li>Pitch</li>
+        <li>Frequency</li>
         </ul>
         </div>
         """,
         unsafe_allow_html=True
     )
     # Add image
-    st.image("data/images/home_page.JPG", use_column_width=True)
+    st.image("data/images/home_page.png", use_column_width=True)
 
     st.markdown("""Rather than reading a textbook, here you will be able to play around with pre-recorded sounds and see how they impact your ability to detect the location of sounds.<br><br><b>Remember to use earbuds or headphones!</b><br>""", unsafe_allow_html=True)
 
