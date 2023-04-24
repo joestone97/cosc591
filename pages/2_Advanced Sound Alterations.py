@@ -126,7 +126,19 @@ def main():
 
     st.title("A Better Method Scientist's Invented")
     st.header("Head-Related Transfer Functions (HRTF)")
-    st.markdown("Although 'Head-Related Transfer Functions' is a complicated name, and they're complicated to understand, the idea behind them is quite simple.<br><br> You would have noticed when previously changing the delay, volume, and frequency that no matter how much you played around it was difficult to make a sound appear to come from a specific direction. That's because although those three factors significantly influence our ability to detect sound, the real world is complicated and these are not the only factors at play. The shape of your ear, how sound bounces off your body, and even the elevation the sound comes from can change our perception of a sound's origin.<br>Scientists invented a better way that trying to fiddle with the delay, volume, and pitch until sound appeared to come from the desired location. Instead they just measured the sound from every angle around a person by sticking a microphone in both of their ears. Then they used some math to figure out how the sound changed depending on the angle and elevation, and came up with HRTFs.<br><b>Have a play with what they came up with! Just Change the angle and elevation", unsafe_allow_html=True)
+    st.markdown("Although 'Head-Related Transfer Functions' is a complicated name, and they're complicated to understand, the idea behind them is quite simple.<br><br> You would have noticed when previously changing the delay, volume, and frequency that no matter how much you played around it was difficult to make a sound appear to come from a specific direction. That's because although those three factors significantly influence our ability to detect sound, the real world is complicated and these are not the only factors at play. The shape of your ear, how sound bounces off your body, and even the elevation the sound comes from can change our perception of a sound's origin.<br>Scientists invented a better way that trying to fiddle with the delay, volume, and pitch until sound appeared to come from the desired location. Instead they just measured the sound from every angle around a person by sticking a microphone in both of their ears. Then they used some math to calculate how the sound changed depending on the angle and elevation, and came up with HRTFs.", unsafe_allow_html=True)
+    cola,colb=st.columns(2)
+    with cola:
+        st.image("data/images/page_3_image_left.png", use_column_width=True)
+        st.markdown("<center><em>The equipment scientists used to collect audio data. Speakers play the same sound in lots of different positions and the sound in each ear is recorded</em></center>",unsafe_allow_html=True)
+
+    with colb:
+        st.image("data/images/page_3_image_right.png", use_column_width=True)
+        st.markdown("<center><em>The chair spins the person on the spot so the scientists can record sound from every angle. The image shows they know the location of both the ears and every speaker.</em></center>",unsafe_allow_html=True)
+
+
+    st.markdown("<br><b>Have a play with what they came up with! Just Change the angle and elevation",unsafe_allow_html=True)
+    
     col1, col2 = st.columns(2)
     with col1:
         audio_selection = st.radio(label = 'Select Sound',
