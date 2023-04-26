@@ -3,8 +3,7 @@ Hello! In this repository you will find the code and data which are used to crea
 
 The web application is currently accessible using the following link:
 
-[Directional Hearing Workshop](https://joestone97-cosc591-home-page-publish-test2-2c3vq0.streamlit.app/)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://<your-custom-subdomain>.streamlit.app)
+[![SDirectional Hearing Workshop](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://<your-custom-subdomain>.streamlit.app](https://joestone97-cosc591-home-page-publish-test2-2c3vq0.streamlit.app/))
 
 
 ## Context
