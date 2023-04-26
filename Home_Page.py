@@ -4,7 +4,11 @@ from streamlit_extras.switch_page_button import switch_page
 st.set_page_config(
     page_title="Audio Workshop",
     page_icon="🔊",
-    layout="wide"
+    layout="wide",
+    menu_items=[{
+       "label": "Github",
+       "url": "https://github.com/joestone97/cosc591/tree/publish_test2/README.md"
+    }]
 )
 
 def main():
