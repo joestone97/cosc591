@@ -3,19 +3,33 @@ import numpy as np
 import wave
 import io
 import matplotlib.pyplot as plt
-from netCDF4 import Dataset # to read Spatially Oriented Format for Acoustics (SOFA) files
+import pickle
+import gzip
+# from netCDF4 import Dataset # to read Spatially Oriented Format for Acoustics (SOFA) files
 from PIL import Image, ImageOps
 
+# def write_compressed_pickle(data, file_name):
+#     with gzip.open(file_name, 'wb') as f:
+#         pickle.dump(data, f, protocol=pickle.HIGHEST_PROTOCOL)
 
-def read_sofa(file_name):
-    sofa_data = Dataset(file_name, 'r', format='NETCDF4')
+def read_compressed_pickle(file_name):
+    with gzip.open(file_name, 'rb') as f:
+        data = pickle.load(f)
+    return data
 
-    # I think HRIR data set have left and right the wrong way around, so I flipped the index
-    hrir_left = np.squeeze(sofa_data['Data.IR'][:, 1, :]) # [:, 0, :]
-    hrir_right = np.squeeze(sofa_data['Data.IR'][:, 0, :]) # [:, 1, :]
-    az, el, r = np.squeeze(np.hsplit(sofa_data['SourcePosition'][:], 3))
-    # fs = sofa_data['Data.SamplingRate'][:][0] 
-    return hrir_left, hrir_right, az, el, r
+def read_hrir(file_name):
+    hrir = read_compressed_pickle(file_name)
+    return hrir['left'], hrir['right'], hrir['azimuth'], hrir['elevation'], hrir['radius']
+
+# def read_sofa(file_name):
+#     sofa_data = Dataset(file_name, 'r', format='NETCDF4')
+
+#     # I think HRIR data set have left and right the wrong way around, so I flipped the index
+#     hrir_left = np.squeeze(sofa_data['Data.IR'][:, 1, :]) # [:, 0, :]
+#     hrir_right = np.squeeze(sofa_data['Data.IR'][:, 0, :]) # [:, 1, :]
+#     az, el, r = np.squeeze(np.hsplit(sofa_data['SourcePosition'][:], 3))
+#     # fs = sofa_data['Data.SamplingRate'][:][0] 
+#     return hrir_left, hrir_right, az, el, r
 
 def count_channels(wave_file):
     # Open the WAV file
@@ -132,9 +146,12 @@ def hrtf_application(azimuth,elevation,audio_selection,hrir_selection):
         "Thunder":"thunder_96k.wav"
     }
     sofa_file_name = {
-        "Subject 1":"Subject1_HRIRs.sofa",
-        "Subject 2":"Subject30_HRIRs.sofa",
-        "Subject 3":"Subject44_HRIRs.sofa"
+        # "Subject 1":"Subject1_HRIRs.sofa",
+        # "Subject 2":"Subject30_HRIRs.sofa",
+        # "Subject 3":"Subject44_HRIRs.sofa"
+        "Subject 1":"subject_01.pkl.gz",
+        "Subject 2":"subject_30.pkl.gz",
+        "Subject 3":"subject_44.pkl.gz"
     }
 
 
@@ -145,7 +162,8 @@ def hrtf_application(azimuth,elevation,audio_selection,hrir_selection):
     sofa_file_name = sofa_file_name[hrir_selection]
 
     # read SOFA data
-    hrir_left, hrir_right, az, el, r = read_sofa(file_name = './data/hrir/' + sofa_file_name)   
+    # hrir_left, hrir_right, az, el, r = read_sofa(file_name = './data/hrir/' + sofa_file_name)
+    hrir_left, hrir_right, az, el, r = read_hrir(file_name = './data/hrir/' + sofa_file_name)
     #calculate index from azimuth/elevation
     # Find the index of the measurement position that corresponds to the desired azimuth and elevation
     mp_indices = np.where((az == azimuth) & (el == elevation))[0]
