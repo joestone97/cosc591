@@ -11,21 +11,24 @@ The essence of the project relates to the ality of humans (and other animals) to
 sound source in a transverse plane is due to having two ears. It is
 thought that the key factors in identifying direction are differences in
 L-R sound:
--Arrival time (delay)
--Volume
--Frequency
+- Arrival time (delay)
+- Volume
+- Frequency
 
 Additionally, to explore and introduce the more advanced audio augmentation methodologies which are related these factors. The creation and application of Head Related Transfer Functions (HRTFs) is one such method.
 
 ## Meet the team 
 
-[**Joseph Stone**:](email@email.com)
+- **Joseph Stone** email@email.com
 <sub>blurb about studies/role in the project/experience</sub> 
-[**Jesse Taylor**](email@email.com)
+
+- **Jesse Taylor** email@email.com
 <sub>blurb about studies/role in the project/experience</sub> 
-[**Bhagya Karunarathna**](email@email.com)
+
+- **Bhagya Karunarathna** email@email.com
 <sub>blurb about studies/role in the project/experience</sub> 
-[**Ron Bradbury**](email@email.com)
+
+- **Ron Bradbury**](email@email.com
 <sub>blurb about him being a former lecturer</sub> 
 
 ## Manuals
@@ -39,10 +42,10 @@ link?
 
 ### Repository overview
 Use relative links to link to the different folders, and use this section to explain the folder structure?
--The website's design and structure are provided by the script [Home_Page.py](/Home_Page.py) and the scripts in the folder titled ["Pages"](pages/). the three scripts are named after as they appear in the sidebar in the web application, and contain all of the code relating to the display of each web page.
--The scripts in the folder "[scripts](/scripts/)" essentially provide all of the audio alteration functionality for the web application (the "back end"). The changes to the delay, volume, and frequency are performed using the appropriately named scripts, and the application of the HRTF is done using the "htrf" script.
--The data the web application needs to run is also all contained in a single folder, the [data](/data) folder. Inside there are three subfolders dividing the inputs into the audio, images, and hrtf data used.
--The requirements for the web application must be specified in the [requirements text file](/requirements.txt) in order for the website which hosts the web application deploy the application without errors.
+- The website's design and structure are provided by the script [Home_Page.py](/Home_Page.py) and the scripts in the folder titled ["Pages"](pages/). the three scripts are named after as they appear in the sidebar in the web application, and contain all of the code relating to the display of each web page.
+- The scripts in the folder "[scripts](/scripts/)" essentially provide all of the audio alteration functionality for the web application (the "back end"). The changes to the delay, volume, and frequency are performed using the appropriately named scripts, and the application of the HRTF is done using the "htrf" script.
+- The data the web application needs to run is also all contained in a single folder, the [data](/data) folder. Inside there are three subfolders dividing the inputs into the audio, images, and hrtf data used.
+- The requirements for the web application must be specified in the [requirements text file](/requirements.txt) in order for the website which hosts the web application deploy the application without errors.
 
 
 ## Credit / Acknowledgements
