@@ -21,15 +21,19 @@ Additionally, to explore and introduce the more advanced audio augmentation meth
 ## Meet the team 
 
 - **Joseph Stone** email@email.com
+
 <sub>blurb about studies/role in the project/experience</sub> 
 
 - **Jesse Taylor** email@email.com
+
 <sub>blurb about studies/role in the project/experience</sub> 
 
 - **Bhagya Karunarathna** email@email.com
+
 <sub>blurb about studies/role in the project/experience</sub> 
 
 - **Ron Bradbury** email@email.com
+
 <sub>blurb about him being a former lecturer</sub> 
 
 ## Manuals
