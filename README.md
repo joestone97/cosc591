@@ -65,3 +65,5 @@ maybe link/mention the exact hrtf subject used?
 ### Image Data
 ???
 
+# Copyright
+note about it being copyleft
