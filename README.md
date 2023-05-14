@@ -19,23 +19,11 @@ L-R sound:
 
 Additionally, to explore and introduce the more advanced audio augmentation methodologies which are related these factors. The creation and application of Head Related Transfer Functions (HRTFs) is one such method.
 
-## Meet the team 
-
-- **Joseph Stone** email@email.com
-
-<sub>blurb about studies/role in the project/experience</sub> 
-
-- **Jesse Taylor** email@email.com
-
-<sub>blurb about studies/role in the project/experience</sub> 
-
-- **Bhagya Karunarathna** email@email.com
-
-<sub>blurb about studies/role in the project/experience</sub> 
-
-- **Ron Bradbury** email@email.com
-
-<sub>blurb about him being a former lecturer</sub> 
+## Team members
+- **Joseph Stone** 
+- **Jesse Taylor** 
+- **Bhagya Karunarathna** > 
+ 
 
 ## Manuals
 The project required the creation of the following manuals. These explain to users how to set up the web application from scratch, and explain the expected use cases for the application.
@@ -57,13 +45,17 @@ Use relative links to link to the different folders, and use this section to exp
 ## Credit / Acknowledgements
 ### HRTFs
 The HRTFs were sourced from https://3d3a.princeton.edu/3d3a-lab-head-related-transfer-function-database#:-:text=hrtf, specifically this embedded link https://gofile-36477a4a30.us5.quickconnect.to/fsdownload/67b2jfkjw/Public-Data.
-maybe link/mention the exact hrtf subject used?
 
 ### Audio Data
 ???
 
 ### Image Data
-???
+Home page images:
+- http://www.mediacollege.com/audio/01/sound-waves.html
+- Virtual Audio Systems Scientific Figure on ResearchGate. Available from: https://www.researchgate.net/figure/Head-rotations-to-resolve-front-back-ambiguities-viewed-from-above-When-the-sound_fig3_220089969
+
+Third page images:
+- Image from https://3d3a.princeton.edu/3d3a-lab-head-related-transfer-function-database#:-:text=hrtf
 
 # Copyright
-note about it being copyleft
+The LICENSE.txt file was included to indicate that anyone can freely use, modify, and distribute the contents of this repository.
