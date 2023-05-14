@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import wave
-import io
 import matplotlib.pyplot as plt
 import pickle
 import gzip

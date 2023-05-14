@@ -1,5 +1,5 @@
 # Directional Hearing Workshop
-Hello! In this repository you will find the code and data which are used to create the Directional Hearing Workshop WebApp.
+Hello! In this repository you will find the code and data used to create the Directional Hearing Workshop WebApp.
 
 The web application is currently accessible using the following link:
 
@@ -9,7 +9,7 @@ The web application is currently accessible using the following link:
 ## Context
 The educational workshop was created for a University of New England (UNE) Masters of Data Science project. The client, Ron Bradbury, requested a web application be developed that can be used to teach High School Students the key concepts in directional hearing.
 
-The essence of the project relates to the ality of humans (and other animals) to identify the direction of a
+The essence of the project relates to the ability of humans (and other animals) to identify the direction of a
 sound source in a transverse plane is due to having two ears. It is
 thought that the key factors in identifying direction are differences in
 L-R sound:

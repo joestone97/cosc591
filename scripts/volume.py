@@ -1,4 +1,14 @@
 def volume(ear, file, scaling_factor):
+    """
+    Function provides back-end functionality for the volume section of the web app
+
+    The function has three steps:
+        1.Reads an audio file from the ./data/audio/ folder
+        2.Augments audio file based on input arguments
+        3.Writes output to the temporary file in the ./data/audio/ folder
+
+    note: the data in the returned "y_scaled" variable is redundant and simply triggers the reloading of a widget on the front end
+    """
     import soundfile as sf
     import numpy as np
     y, sr = sf.read('./data/audio/'+ file)

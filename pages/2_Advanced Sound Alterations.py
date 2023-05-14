@@ -11,6 +11,7 @@ import io
 import matplotlib.pyplot as plt
 from PIL import Image, ImageOps
 import sys
+from streamlit_extras.switch_page_button import switch_page
 
 sys.path.insert(0, './scripts')
 from scripts import hrtf
@@ -186,6 +187,17 @@ def main():
         wave_data = buffer.read()
 
     st.audio(wave_data, format='audio/wav')
+
+    # Add button to refer to the next page
+    col1, col2, col3 = st.columns([1,1,1])
+    with col2:
+        if st.button('Return to Home', key="start_button", help="Click to return to the home page",use_container_width=True):
+        # Open the other Streamlit page
+            switch_page("home page")
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 
 # ********************
 # run main()
